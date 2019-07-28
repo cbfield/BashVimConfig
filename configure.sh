@@ -23,5 +23,11 @@ repos=(
 
 for repo in "${repos[@]}"; do
 	filename="$(echo "$repo" | cut -d'/' -f 2 | rev | cut -d'.' -f 1 --complement | rev)"
-	echo $filename
+	filepath="/home/$(whoami)/.vim/bundle/${filename}"
+	echo $filepath
+	if [ -d "$filepath" ]; then
+		echo "file found"
+	else
+		echo "not found"
+	fi
 done
