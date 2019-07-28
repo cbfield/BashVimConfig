@@ -24,10 +24,13 @@ repos=(
 for repo in "${repos[@]}"; do
 	filename="$(echo "$repo" | cut -d'/' -f 2 | rev | cut -d'.' -f 1 --complement | rev)"
 	filepath="/home/$(whoami)/.vim/bundle/${filename}"
-	echo $filepath
+	printf "\n${filepath}\n"
 	if [ -d "$filepath" ]; then
-		echo "file found"
+		printf "repo found\n"
+		cd ${filepath}
+		git pull 
 	else
-		echo "not found"
+		printf "repo not found\n"
+		git clone ${repo} ${filepath}
 	fi
 done
