@@ -21,6 +21,11 @@ repos=(
 	git@github.com:MarcWeber/vim-addon-mw-utils.git
 )
 
+if [ "$1" == "-rc" ]; then
+	cp .bashrc /home/$(whoami)/.bashrc
+	cp .vimrc /home/$(whoami)/.vimrc
+fi
+
 for repo in "${repos[@]}"; do
 	filename="$(echo "$repo" | cut -d'/' -f 2 | rev | cut -d'.' -f 1 --complement | rev)"
 	filepath="/home/$(whoami)/.vim/bundle/${filename}"
@@ -34,3 +39,4 @@ for repo in "${repos[@]}"; do
 		git clone ${repo} ${filepath}
 	fi
 done
+
