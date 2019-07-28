@@ -22,5 +22,6 @@ repos=(
 )
 
 for repo in "${repos[@]}"; do
-	echo "$repo"
+	filename="$(echo "$repo" | cut -d'/' -f 2 | rev | cut -d'.' -f 1 --complement | rev)"
+	echo $filename
 done
