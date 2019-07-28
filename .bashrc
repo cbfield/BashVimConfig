@@ -116,8 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#####################################################################33
-# Custom Configurations
+#####################################################################
+################## Custom Configurations ############################
+
+#vi-mode in command line because yay Vim
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
