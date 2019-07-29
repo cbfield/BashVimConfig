@@ -23,8 +23,33 @@ repos=(
 
 if [ "$1" == "-rc" ]; then
 	cp .bashrc /home/$(whoami)/.bashrc
+	. /home/$(whoami)/.bashrc
 	cp .vimrc /home/$(whoami)/.vimrc
 fi
+
+if [ -d "/home/$(whoami)/.vim" ]; then
+	if [ -d "/home/$(whoami)/.vim/autoload" ]; then
+		if [ ! -f "/home/$(whoami)/.vim/autoload/pathogen.vim" ]; then
+			printf "Installing Pathogen Plugin Manager"
+			curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+		fi
+	else
+		mkdir /home/$(whoami)/.vim/autoload
+		printf "Installing Pathogen Plugin Manager"
+		curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+	fi
+	if [ ! -d "/home/$(whoami)/.vim/bundle" ]; then
+		mkdir /home/$(whoami)/.vim/bundle
+	fi
+else
+	mkdir /home/$(whoami)/.vim
+	mkdir /home/$(whoami)/.vim/autoload
+	mkdir /home/$(whoami)/.vim/bundle
+	printf "Installing Pathogen Plugin Manager"
+	curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+fi
+
+
 
 for repo in "${repos[@]}"; do
 	filename="$(echo "$repo" | cut -d'/' -f 2 | rev | cut -d'.' -f 1 --complement | rev)"
