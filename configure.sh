@@ -4,7 +4,7 @@ repos=(
 	#color scheme
 	git@github.com:ayu-theme/ayu-vim.git
 	#filesystem navigation
-	git@github.com:scrooloose/nerdtree.git
+	#git@github.com:scrooloose/nerdtree.git
 	git@github.com:tpope/vim-vinegar.git
 	#improved incremental search
 	git@github.com:haya14busa/incsearch.vim.git
