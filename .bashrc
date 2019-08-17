@@ -131,3 +131,9 @@ alias pip=pip3
 alias py=python3
 alias open=xdg-open
 alias runserver="python3 manage.py runserver"
+
+#git shortcuts
+alias gitb="git branch"
+alias gitmkb="git checkout -b"
+alias gitrmb="git branch -D"
+alias gitmv="git checkout"
