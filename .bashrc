@@ -123,6 +123,9 @@ fi
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
+#also swapping capslock and escape because yay vim
+setxkbmap -option caps:swapescape
+
 #Python 2 is stupid
 alias python=python3
 alias pip=pip3
