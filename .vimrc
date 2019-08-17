@@ -79,5 +79,5 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 "NerdTree Shortcut
-map :nt :NERDTree
-let NERDTreeShowHidden=1
+"map :nt :NERDTree
+"let NERDTreeShowHidden=1
