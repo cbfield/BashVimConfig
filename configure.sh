@@ -22,20 +22,22 @@ repos=(
 )
 
 if [ "$1" == "-rc" ]; then
+	printf "updating .bashrc\n"
 	cp .bashrc /home/$(whoami)/.bashrc
 	. /home/$(whoami)/.bashrc
+	printf "updating .vimrc\n"
 	cp .vimrc /home/$(whoami)/.vimrc
 fi
 
 if [ -d "/home/$(whoami)/.vim" ]; then
 	if [ -d "/home/$(whoami)/.vim/autoload" ]; then
 		if [ ! -f "/home/$(whoami)/.vim/autoload/pathogen.vim" ]; then
-			printf "Installing Pathogen Plugin Manager"
+			printf "Installing Pathogen Plugin Manager\n"
 			curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 		fi
 	else
 		mkdir /home/$(whoami)/.vim/autoload
-		printf "Installing Pathogen Plugin Manager"
+		printf "Installing Pathogen Plugin Manager\n"
 		curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	fi
 	if [ ! -d "/home/$(whoami)/.vim/bundle" ]; then
@@ -45,7 +47,7 @@ else
 	mkdir /home/$(whoami)/.vim
 	mkdir /home/$(whoami)/.vim/autoload
 	mkdir /home/$(whoami)/.vim/bundle
-	printf "Installing Pathogen Plugin Manager"
+	printf "Installing Pathogen Plugin Manager\n"
 	curl -LSso /home/$(whoami)/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 fi
 
