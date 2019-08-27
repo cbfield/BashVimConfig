@@ -1,4 +1,3 @@
-
 "Pathogen Plugin Manager
 execute pathogen#infect()
 syntax on
@@ -17,6 +16,9 @@ colorscheme ayu
 "Splits
 set splitbelow
 set splitright
+
+"Quit w/o Save Shortcut
+nnoremap QQ ZQ
 
 "Wildmenu
 set wildmenu
