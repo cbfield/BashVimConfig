@@ -137,6 +137,7 @@ alias runserver="python3 manage.py runserver"
 
 #git shortcuts
 alias gitb="git branch"
-alias gitmkb="git checkout -b"
-alias gitrmb="git branch -D"
 alias gitmv="git checkout"
+
+#adding git scripts to PATH
+export PATH=$PATH:/home/chris/Documents/git_scripts/
