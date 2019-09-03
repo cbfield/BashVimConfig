@@ -123,7 +123,7 @@ fi
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 
-#also swapping capslock and escape because yay vim
+#also swapping capslock and escape because yay Vim
 setxkbmap -option caps:swapescape
 
 #Python 2 is stupid
@@ -133,11 +133,14 @@ alias pip=pip3
 #Also I don't like typing
 alias py=python3
 alias open=xdg-open
-alias runserver="python3 manage.py runserver"
 
 #git shortcuts
 alias gitb="git branch"
 alias gitmv="git checkout"
 
-#adding git scripts to PATH
-export PATH=$PATH:/home/chris/Documents/git_scripts/
+#django shortcuts
+alias manage="python3 manage.py"
+
+#adding scripts to PATH
+export PATH=$PATH:/home/chris/Documents/scripts/git_scripts/
+export PATH=$PATH:/home/chris/Documents/scripts/django_scripts/
