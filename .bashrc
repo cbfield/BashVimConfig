@@ -147,3 +147,7 @@ alias manage="python3 manage.py"
 #adding scripts to PATH
 export PATH=$PATH:/home/chris/Documents/scripts/git_scripts/
 export PATH=$PATH:/home/chris/Documents/scripts/django_scripts/
+
+#adding gopath to path
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export GOPATH=$HOME/go:/gits/go-gits
