@@ -1,3 +1,4 @@
+
 "Pathogen Plugin Manager
 execute pathogen#infect()
 syntax on
@@ -17,7 +18,7 @@ colorscheme ayu
 set splitbelow
 set splitright
 
-"Quit w/o Save Shortcut
+"Quit & Save Shortcut
 nnoremap QQ ZQ
 
 "Wildmenu
@@ -73,13 +74,11 @@ let g:indentLine_first_char = '|'
 let g:indentLine_showFirstIndentLevel = 1
 let g:indentLine_setColors = 0
 
-
 "Window Movement
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"NerdTree Shortcut
-"map :nt :NERDTree
-"let NERDTreeShowHidden=1
+"Mouse Support Because I Am Weak
+set mouse=a

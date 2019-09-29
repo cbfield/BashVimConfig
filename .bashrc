@@ -121,6 +121,9 @@ fi
 
 #vi-mode in command line because yay Vim
 set -o vi
+bind "set show-mode-in-prompt on"
+bind 'set vi-ins-mode-string "+"'
+bind 'set vi-cmd-mode-string ":"'
 bind -m vi-insert "\C-l":clear-screen
 
 #also swapping capslock and escape because yay Vim
